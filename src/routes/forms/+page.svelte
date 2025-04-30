@@ -21,12 +21,7 @@
 					Creating inclusive data collection experiences through WCAG-compliant form design
 				</p>
 			</div>
-
-			<!-- Menu Section -->
-			
-					
-			</div>
-		
+		</div>
 	</header>
 
 	<!-- Main Content -->
@@ -37,6 +32,10 @@
 				<div class="rounded-xl bg-gradient-to-b from-gray-800/80 to-gray-900/80 p-8 shadow-xl">
 					<h3 class="mb-4 text-2xl font-semibold text-white">Core Principles</h3>
 					<ul class="list-disc space-y-4 pl-6 text-gray-300">
+						<li>Perceivable: All users should be able to perceive the form elements and labels.</li>
+						<li>Operable: Users must be able to navigate and interact with the form using various input methods.</li>
+						<li>Understandable: Instructions, labels, and error messages should be clear.</li>
+						<li>Robust: Forms should work reliably across different devices and assistive technologies.</li>
 						<li>Semantic HTML structure</li>
 						<li>Clear visual hierarchy</li>
 						<li>Keyboard navigation support</li>
@@ -74,7 +73,15 @@
 						&lt;form id="good-form"&gt; &lt;label&gt; Name: &lt;input type="text"
 						autocomplete="name"&gt; &lt;/label&gt; &lt;/form&gt;
 					</code>
-					<p class="mt-4 text-gray-300">Semantic HTML with autocomplete attributes</p>
+					<p class="mt-4 text-gray-300">Use <label> elements associated with form controls via the for attribute:</p>
+					<code class="block overflow-x-auto rounded bg-gray-900 p-4 text-green-400">
+						&lt;label for="name"&gt;Name&lt;/label&gt;
+						&lt;input type="text" id="name" name="name" /&gt;
+					</code>
+					<p class="mt-4 text-gray-300">For complex controls or custom widgets, ensure ARIA labels or descriptions are used appropriately:</p>
+					<code class="block overflow-x-auto rounded bg-gray-900 p-4 text-green-400">
+						&lt;input type="text" aria-label="Full name" /&gt;
+					</code>
 				</div>
 			</div>
 		</section>
@@ -88,6 +95,7 @@
 					<code class="mt-4 block rounded bg-gray-900 p-4 text-sm text-orange-400">
 						aria-live="polite"
 					</code>
+					<p class="mt-4 text-gray-300">Validate inputs in real-time or on submission. Use accessible notifications for validation results. Avoid relying solely on color; combine color cues with text.</p>
 				</div>
 				<div class="rounded-xl bg-gradient-to-b from-gray-800/80 to-gray-900/80 p-8 shadow-xl">
 					<h3 class="mb-4 text-xl font-semibold text-white">Error Summary</h3>
@@ -157,3 +165,7 @@
 		</div>
 	</footer>
 </div>
+
+<style>
+	/* Custom styles can be added here if needed */
+</style>

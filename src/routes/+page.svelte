@@ -1,5 +1,5 @@
 <script>
-	// Add any necessary Svelte logic here
+
 </script>
 
 <div class="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
